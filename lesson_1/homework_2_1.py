@@ -1,0 +1,12 @@
+def number_to_digits() -> list:
+    number = int(input("Введи 4х-значное число!\n"))
+    return [int(digit) for digit in list(str(number))]
+
+
+def print_list(given):
+    for each in given:
+        print(each)
+
+
+list_to_print = number_to_digits()
+print_list(list_to_print)
