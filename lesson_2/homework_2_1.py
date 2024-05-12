@@ -1,4 +1,4 @@
-def number_to_digits() -> list:
+def number_to_digits():
     print("Функция разбивает ввееденное вами число на цифры.")
     number = int(input("Введи 4х-значное число!\n"))
     print(int(number/1000))
