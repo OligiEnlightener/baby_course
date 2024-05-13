@@ -9,12 +9,14 @@ def calculate():
     elif operation == '-':
         subtrahtion = int(first) - int(second)
         print(str(subtrahtion))
-    elif operation == '*':
-        multiplication = int(first) * int(second)
-        print(str(multiplication))
+    elif operation == '/':
+        if int(second) != 0:
+            multiplication = int(first) / int(second)
+            print(str(multiplication))
+        else:
+            print("Делить на ноль нельзя! ")
     else:
-        if second != 0:
-            division = int(first) / int(second)
+            division = int(first) * int(second)
             print(str(division))
 
 

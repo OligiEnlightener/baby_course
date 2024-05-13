@@ -1,13 +1,12 @@
 def divide(lst):
-    if len(lst) > 0:
-        if len(lst) % 2 == 0:
-            middle_index = int(len(lst) / 2)
-            print(str(lst[0:middle_index]), str(lst[middle_index:]))
-        else:
-            middle_index = int((len(lst) / 2) + 1)
-            print(str(lst[0:middle_index]), str(lst[middle_index:]))
+    middle_index = int(len(lst) / 2)
+    if len(lst) % 2 == 0:
+        result = [lst[0:middle_index], lst[middle_index:]]
+        print(result)
     else:
-        print([])
+        middle_index += 1
+        result = [lst[0:middle_index], lst[middle_index:]]
+        print(result)
 
 
 divide([1, 2, 3])
