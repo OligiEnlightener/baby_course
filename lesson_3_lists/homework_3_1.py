@@ -1,7 +1,6 @@
 def last_to_first(lst) -> list:
     if len(lst) > 0:
-        lst.insert(0, lst[len(lst) - 1])
-        lst.pop()
+        lst.insert(0, lst.pop())
     return lst
 
 
