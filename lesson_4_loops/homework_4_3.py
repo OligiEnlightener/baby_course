@@ -6,7 +6,7 @@ def make_random_list():
     result = []
     for number in range(random.randint(3, 10)):
         result.append(random.randint(0, 1000))
-        # В примере инты, а я не могу придумать нормальный способ закидывать целый числа.
+        # В примере инты, а я не могу придумать нормальный способ закидывать целыe числа.
     return result
 
 
