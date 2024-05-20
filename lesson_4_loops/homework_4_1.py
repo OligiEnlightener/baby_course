@@ -1,4 +1,4 @@
-def move_zeros(lst: list):
+def move_zeros(lst: list) -> list:
     lst.sort(key=lambda x: x == 0)
     return lst
 
