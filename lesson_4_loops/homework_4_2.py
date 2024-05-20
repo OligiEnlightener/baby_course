@@ -3,7 +3,12 @@ def sum_up_even_multiply(lst: list):
     # for number in lst[0::2]:
     #     summ += number
     # return summ * lst[-1] * lst[-1] if len(lst) > 0 else 0
-    return sum(lst[0::2]) * lst[-1] if len(lst) > 0 else 0
+    # return sum(lst[0::2]) * lst[-1] if len(lst) > 0 else 0
+    sum = 0
+
+    for x in lst[::2]:
+        sum += x
+    return sum * lst[-1]
 
 
 # Code testing
