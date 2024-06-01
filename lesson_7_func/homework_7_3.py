@@ -1,4 +1,4 @@
-def second_index(text, some_str):
+def second_index(text, some_str) -> str:
     return text.find(some_str, text.find(some_str) + 1) if text.count(some_str) > 1 else None
 
 
