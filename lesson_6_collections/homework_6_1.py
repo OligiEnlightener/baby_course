@@ -4,7 +4,7 @@ import string
 # сорян, но надеюсь это решение не совсем шляпа
 
 
-def get_letters(bounds: str):
+def get_letters(bounds: str) -> str:
     result = string.ascii_letters
     return result[result.find(bounds[0]): result.find(bounds[2]) + 1]
 
