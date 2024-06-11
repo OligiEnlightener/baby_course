@@ -1,6 +1,4 @@
-
-
-def add_one(some_list:list) ->list:
+def add_one(some_list: list) -> list:
     number = int("".join(str(digit) for digit in some_list))
     number += 1
     return [int(str(digit)) for digit in str(number)]
