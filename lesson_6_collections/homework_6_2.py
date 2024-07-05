@@ -26,34 +26,39 @@ def format_days(days: int) -> str:
         2: "дні",
     }
     result = str(days) + " "
-    if days % 10 == 1 and days != 11:
+    last_digit = days % 10
+    if last_digit == 1 and days != 11:
         result += day_forms.get(1)
-    elif (days % 10 == (2 or 3 or 4)) and days != (11 or 12 or 13 or 14):
+    elif days == 11 or days == 12 or days == 13 or days == 14:
+        result += day_forms.get(0)
+    elif last_digit == 2 or last_digit == 3 or last_digit == 4:
         result += day_forms.get(2)
     else:
         result += day_forms.get(0)
     return result
 
 
-def get_input()-> int:
+'''    if days % 10 == 1 and days != 11:
+        result += day_forms.get(1)
+    elif (days % 10 == (2 or 3 or 4)) and days != (11 or 12 or 13 or 14):
+        result += day_forms.get(2)'''
+
+
+def get_input() -> int:
     return int(input("Введіть кількість секунд від 0 до 8640000\n"))
 
 
-inputted_seconds = get_input()
-formatted_time = format_time(inputted_seconds)
-print(formatted_time)
+# inputted_seconds = get_input()
+# formatted_time = format_time(inputted_seconds)
 
+print(format_time(3715200))
 
 # testing
-assert format_time(224930) == '2 дні, 14:28:50'
-assert format_time(466289) == '5 днів, 09:31:29'
+assert format_time(224930) == '2 дні, 14:28:50', f"{format_time(224930)}"
+assert format_time(466289) == '5 днів, 09:31:29', f"{format_time(466289)}"
 assert format_time(950400) == '11 днів, 00:00:00'
 assert format_time(1209600) == '14 днів, 00:00:00'
 assert format_time(1900800) == '22 дні, 00:00:00'
 assert format_time(8639999) == '99 днів, 23:59:59'
 assert format_time(22493) == '0 днів, 06:14:53'
 assert format_time(7948799) == '91 день, 23:59:59'
-
-
-
-
