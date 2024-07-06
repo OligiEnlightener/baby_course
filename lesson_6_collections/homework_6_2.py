@@ -29,10 +29,12 @@ def format_days(days: int) -> str:
     last_digit = days % 10
     if last_digit == 1 and days != 11:
         result += day_forms.get(1)
-    elif days == 11 or days == 12 or days == 13 or days == 14:
-        result += day_forms.get(0)
-    elif last_digit == 2 or last_digit == 3 or last_digit == 4:
+    elif (days % 10 in (2, 3, 4)) and days not in (11, 12, 13, 14):
         result += day_forms.get(2)
+    # elif days == 11 or days == 12 or days == 13 or days == 14:
+    #     result += day_forms.get(0)
+    # elif last_digit == 2 or last_digit == 3 or last_digit == 4:
+    #     result += day_forms.get(2)
     else:
         result += day_forms.get(0)
     return result
@@ -40,7 +42,7 @@ def format_days(days: int) -> str:
 
 '''    if days % 10 == 1 and days != 11:
         result += day_forms.get(1)
-    elif (days % 10 == (2 or 3 or 4)) and days != (11 or 12 or 13 or 14):
+    elif (days % 10 in (2, 3, 4)) and days not in (11, 12, 13, 14):
         result += day_forms.get(2)'''
 
 
