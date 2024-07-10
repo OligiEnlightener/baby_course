@@ -10,6 +10,7 @@ class Purchase:
 
     def add_item(self, item: Item, cnt: int):
         self.products[item] = cnt
+        self.total += item.price * cnt
 
     def __str__(self) -> str:
         result = f'User: {self.user.name} {self.user.surname}\n'
@@ -19,7 +20,4 @@ class Purchase:
         return result
 
     def get_total(self) -> int:
-        result = 0
-        for item in self.products:
-            result += (self.products[item] * item.price)
-        return result
+        return self.total
