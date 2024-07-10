@@ -2,10 +2,10 @@ import math
 
 
 def generate_cube_numbers(end: int) -> list:
-    sqrt_3_weight = pow(end, 1 / 3) + 0.00000000000001
-    floored_idx = math.floor(sqrt_3_weight)
-    for n in range(2, floored_idx + 1):
-        yield pow(n, 3)
+    for n in range(2, end ):
+        pow_n = n ** 3
+        if pow_n <= end:
+            yield pow_n
 
 
 from inspect import isgenerator

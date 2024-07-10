@@ -1,8 +1,8 @@
-def pow(x):
+def pow(x: int):
     return x ** 2
 
 
-def some_gen(begin, end, func):
+def some_gen(begin: int, end: int, func):
     for _ in range(end):
         yield begin
         func(begin)
