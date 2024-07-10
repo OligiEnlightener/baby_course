@@ -1,4 +1,4 @@
-from lesson_11_abstraction.homework_11.Person import Person
+from lesson_11_abstraction.homework_11_1.person import Person
 
 
 class Student(Person):

@@ -1,5 +1,5 @@
-from lesson_11_abstraction.homework_11.Group import Group
-from lesson_11_abstraction.homework_11.Student import Student
+from lesson_11_abstraction.homework_11_1.group import Group
+from lesson_11_abstraction.homework_11_1.student import Student
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
