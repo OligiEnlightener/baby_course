@@ -1,4 +1,4 @@
-from lesson_11_abstraction.homework_11_1 import student
+from lesson_11_abstraction.homework_11_1.student import Student
 
 
 class Group:
