@@ -3,7 +3,7 @@ from lesson_11_abstraction.homework_11_1.person import Person
 
 class Student(Person):
 
-    def __init__(self, gender, age, first_name, last_name, record_book):
+    def __init__(self, gender : str, age: int, first_name: str, last_name: str, record_book: str):
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
 

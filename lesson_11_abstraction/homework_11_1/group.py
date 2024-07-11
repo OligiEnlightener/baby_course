@@ -10,7 +10,7 @@ class Group:
     def add_student(self, student: Student):
         self.group.add(student)
 
-    def delete_student(self, last_name):
+    def delete_student(self, last_name: str):
         self.group.discard(self.find_student(last_name))
 
     def find_student(self, last_name: str) -> Student:
