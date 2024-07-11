@@ -1,22 +1,5 @@
-from lesson_11_abstraction.homework_11_1.group import Group
 from lesson_11_abstraction.homework_11_1.student import Student
-from lesson_12.homework_12_1.group_limit_size import GroupLimitSize
-
-
-class Group_limited(Group):
-    group_size = 10
-
-    def __init__(self, number: int):
-        super().__init__(number)
-        self.number = number
-        self.group = set()
-
-    def add_student(self, student: Student):
-        if len(self.group) < Group_limited.group_size:
-            self.group.add(student)
-        else:
-            raise GroupLimitSize(GroupLimitSize.msg)
-
+from lesson_12.homework_12_1.group_limited import Group_limited
 
 gr1 = Group_limited(5)
 gr1.add_student(Student('male', 41, "Antony", "Soprano", 'KN1999'))

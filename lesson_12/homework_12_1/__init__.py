@@ -1,2 +1,2 @@
-from lesson_12.homework_12_1.group_limit_size import GroupLimitSize
+from lesson_12.homework_12_1.group_limit_size import GroupLimitSizeException
 
