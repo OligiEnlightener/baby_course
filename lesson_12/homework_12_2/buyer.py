@@ -4,3 +4,7 @@ class Buyer:
         self.last_name = last_name
         self.patronymic = patronymic
         self.phone_number = phone_number
+
+
+    def __str__(self):
+        return f'{self.name} {self.last_name} {self.patronymic}\nPhone: {self.phone_number}'

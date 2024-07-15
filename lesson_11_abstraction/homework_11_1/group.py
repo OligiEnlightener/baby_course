@@ -19,6 +19,6 @@ class Group:
             result = student if student.last_name == last_name else result
         return result
 
-    def __str__(self):
+    def __str__(self) -> str:
         all_students = '\n'.join(str(student) for student in self.group)
         return f'Group number: {self.number}\n{all_students}'
